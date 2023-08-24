@@ -1,62 +1,160 @@
 <div class="container">
   <div class="content-wrapper">
     <div class="left-content">
-      <div class="wrapper-content-left">
-        <div class="title-wrapper-left">
-          <p>Videos</p>
-          <p>Browse All Videos</p>
-        </div>
-        <div>
-          <div class="card-large">
-            <div>
-              <p>How to Improve</p>
-              <p>Your Skill</p>
+      <div>
+        <div class="wrapper-content-left">
+          <div class="title-wrapper-left">
+            <p>{{articles1[0].category}}</p>
+            <p>Browse All {{articles1[0].category}}</p>
+          </div>
+          <div>
+            <div 
+              class="card-large" 
+              style="background-image: url({{articles1[0].image}});"
+            >
+              <div>
+                <p>{{articles1[0].title}}</p>
+                <div>
+                  <p>{{articles1[0].author}}</p>
+                  <p>{{articles1[0].views}} views</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-small-wrapper">
+              <div *ngFor="let article of articles1.slice(1,3)" class="card-small" style="background-image: url({{article.image}})">
+                <div>
+                  <p>{{article.title}}</p>
+                  <p>{{article.views}} views</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="card-small-wrapper">
-            <div class="card-small">
-  
+        </div>
+        <div class="wrapper-content-right">
+          <div *ngFor="let article of articles1.slice(3,5)" class="card-small-left" style="background-image: url({{article.image}})">
+            <div>
+              <p>{{article.title}}</p>
+              <p>{{article.views}} views</p>
             </div>
-            <div class="card-small">
-  
-            </div>
+          </div>
+          <div class="card-small-upload">
+            <img width="20" height="20" src="/assets/upload.svg" alt="">
+            Upload<br /> your own {{articles1[0].category}}
           </div>
         </div>
       </div>
-      <div class="wrapper-content-right">
-        <div class="card-small-left"></div>
-        <div class="card-small-left"></div>
-        <div class="card-small-left"></div>
+      <div style="margin-top: 40px;">
+        <div class="wrapper-content-left">
+          <div class="title-wrapper-left">
+            <p>{{articles2[0].category}}</p>
+            <p>View All</p>
+          </div>
+          <div>
+            <div 
+              class="card-large" 
+              style="background-image: url({{articles2[0].image}});"
+            >
+              <div>
+                <p>{{articles2[0].title}}</p>
+                <div>
+                  <p>{{articles2[0].author}}</p>
+                  <p>{{articles2[0].views}} views</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-small-wrapper">
+              <div *ngFor="let article of articles2.slice(1,3)" class="card-small" style="background-image: url({{article.image}})">
+                <div>
+                  <p>{{article.title}}</p>
+                  <p>{{article.views}} views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper-content-right">
+          <div *ngFor="let article of articles2.slice(3,5)" class="card-small-left" style="background-image: url({{article.image}})">
+            <div>
+              <p>{{article.title}}</p>
+              <p>{{article.views}} views</p>
+            </div>
+          </div>
+          <div class="card-small-upload">
+            <img width="20" height="20" src="/assets/circle.svg" alt="">
+            Show<br /> Your Work
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 40px;">
+        <div class="wrapper-content-left">
+          <div class="title-wrapper-left">
+            <p>{{articles3[0].category}}</p>
+            <p>Browse All Documents</p>
+          </div>
+          <div>
+            <div 
+              class="card-large" 
+              style="background-image: url({{articles3[0].image}});"
+            >
+              <div>
+                <p>{{articles3[0].title}}</p>
+                <div>
+                  <p>{{articles3[0].author}}</p>
+                  <p>{{articles3[0].views}} views</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-small-wrapper">
+              <div *ngFor="let article of articles3.slice(1,3)" class="card-small" style="background-image: url({{article.image}})">
+                <div>
+                  <p>{{article.title}}</p>
+                  <p>{{article.views}} views</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper-content-right">
+          <div *ngFor="let article of articles3.slice(3,5)" class="card-small-left" style="background-image: url({{article.image}})">
+            <div>
+              <p>{{article.title}}</p>
+              <p>{{article.views}} views</p>
+            </div>
+          </div>
+          <div class="card-small-upload">
+            <img width="20" height="20" src="/assets/circle-plus.svg" alt="">
+            Share<br /> Your Document
+          </div>
+        </div>
       </div>
     </div>
     <div class="right-content">
-      <div class="title-wrapper-right">
-        <p>Activity</p>
-        <p>View Timeline / Filter activities</p>
+      <div class="activities-wrapper">
+        <div class="title-wrapper-right">
+          <p>Activity</p>
+          <p>View Timeline / Filter activities</p>
+        </div>
+        <div>
+          <div class="article-wrapper" *ngFor="let activity of activities">
+            <div class="thumb" style="background-image: url({{activity.image}})"></div>
+            <div>
+              <p><b>{{activity.name}}</b> {{activity.category}}</p>
+              <p>{{activity.short_desc}}</p>
+              <p>{{activity.moment}}</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div>
-        <div class="article-wrapper">
-          <div class="thumb"></div>
-          <div>
-            <p>John lennon</p>
-            <p>John lennon</p>
-            <p>John lennon</p>
-          </div>
+        <div class="title-wrapper-right">
+          <p>Channels</p>
+          <p>Browse All Channels</p>
         </div>
-        <div class="article-wrapper">
-          <div class="thumb"></div>
-          <div>
-            <p>John lennon</p>
-            <p>John lennon</p>
-            <p>John lennon</p>
-          </div>
-        </div>
-        <div class="article-wrapper">
-          <div class="thumb"></div>
-          <div>
-            <p>John lennon</p>
-            <p>John lennon</p>
-            <p>John lennon</p>
+        <div>
+          <div class="channels-wrapper">
+            <div *ngFor="let channel of channels" style="background-image: url({{channel.image}})">
+              <p>{{channel.name}}</p>
+            </div>
           </div>
         </div>
       </div>

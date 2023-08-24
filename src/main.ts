@@ -1,7 +1,8 @@
 import 'zone.js/dist/zone';
-import { Component } from '@angular/core';
+import { Component, importProvidersFrom } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { bootstrapApplication } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
 import { CategoryComponent } from './components/category/category.component';
 import { FeaturedComponent } from './components/featured/featured.component';
@@ -24,4 +25,8 @@ export class App {
   name = 'Angular';
 }
 
-bootstrapApplication(App);
+bootstrapApplication(App, {
+  providers: [
+    importProvidersFrom(HttpClientModule)
+  ]
+});

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-category',
@@ -9,16 +10,15 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule]
 })
 export class CategoryComponent implements OnInit {
-  category: string[] = [
-    'Videos',
-    'People',
-    'Documents',
-    'Events',
-    'Communities'
-  ]
-  constructor() {}
+  category: string[] = [];
+  constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
-    console.log('object');
+    this.apiService.getCategory()
+    .subscribe(
+      (res) => {
+        this.category = res
+      }
+    )
   }
 }

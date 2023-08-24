@@ -2,7 +2,7 @@
   <div class="menu-wrapper">
     <ul>
       <li *ngFor="let cat of category; let i = index">
-        {{cat}} <span *ngIf="i !== category.length - 1">/</span>&nbsp;
+        {{cat}} <span *ngIf="i !== category.length - 1" style="margin-left: 10px; margin-right: 10px;">/</span>&nbsp;
       </li>
     </ul>
   </div>

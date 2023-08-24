@@ -21,10 +21,14 @@ input {
 
 .cta-wrapper > button:nth-child(2) {
   margin-right: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .cta-wrapper > button:nth-child(3) {
   margin-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .cta-wrapper > div:nth-child(4) > span {

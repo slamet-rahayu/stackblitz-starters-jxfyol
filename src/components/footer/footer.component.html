@@ -1,9 +1,15 @@
 <div class="container">
   <hr />
   <div class="card-wrapper">
-    <div class="card">T</div>
-    <div class="card">L</div>
-    <div class="card">F</div>
+    <div class="card">
+      <img src="/assets/twitter.svg" alt="" width="15" height="15">
+    </div>
+    <div class="card">
+      <img src="/assets/linkedin.svg" alt="" width="15" height="15">
+    </div>
+    <div class="card">
+      <img src="/assets/facebook.svg" alt="" width="15" height="15">
+    </div>
   </div>
   <div class="link-wrapper">
     <p *ngFor="let link of links; let i = index;">
@@ -12,7 +18,7 @@
   </div>
   <p class="copy">&copy; Copyright {{year}}</p>
   <div class="link-wrapper">
-    <p>Privacy /&nbsp;</p>
-    <p>Terms</p>
+    <p style="font-size: 12px;">Privacy /&nbsp;</p>
+    <p style="font-size: 12px;">Terms</p>
   </div>
 </div>
