@@ -1,7 +1,13 @@
 .container {
   background-color: rgb(149 62 68);
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 10px;
+}
+
+@media (min-width: 960px) {
+  .container {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
