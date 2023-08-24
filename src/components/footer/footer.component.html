@@ -1,0 +1,18 @@
+<div class="container">
+  <hr />
+  <div class="card-wrapper">
+    <div class="card">T</div>
+    <div class="card">L</div>
+    <div class="card">F</div>
+  </div>
+  <div class="link-wrapper">
+    <p *ngFor="let link of links; let i = index;">
+      {{link}} <span *ngIf="i !== links.length - 1">/</span>&nbsp;
+    </p>
+  </div>
+  <p class="copy">&copy; Copyright {{year}}</p>
+  <div class="link-wrapper">
+    <p>Privacy /&nbsp;</p>
+    <p>Terms</p>
+  </div>
+</div>

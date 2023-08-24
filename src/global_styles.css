@@ -6,3 +6,14 @@ body, p, h1, h2, h3, h4, h5 {
 div, p {
   color: rgb(237 184 177);
 }
+
+button {
+  background: none;
+  border: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
